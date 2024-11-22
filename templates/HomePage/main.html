@@ -1,0 +1,85 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- الخط الثاني -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+  <div class="head">
+    <img src="{% static 'img/dumbbells.png' %}" alt="" class="d-icon">
+  </div>
+
+  <div class="main">
+    <div class="w-block">
+
+        <h2 dir="rtl">مرحبا بك في موقع دمبلص</h2>
+        <p dir="rtl">الموقع يقدم خدمة معرفة
+            الحقائق الغذائية للاكلات العراقية خصيصا
+            من خلال الكتابه في مربع البحث عن اسم
+            الاكله التي تريد البحث عنها والضغط على 
+            علامه المكبر وستضهر الاجابه في الاسفل
+            
+        </p>
+
+            <div >
+              <form action="" method="GET" class="search-container">
+                
+                <input type="text" class="search-input" placeholder="search here" name="q" />
+                <input type="image" src="{% static 'img/s.png' %}" class="search-icon" alt="بحث"  />
+              </form>
+                
+                </div>
+  
+
+
+
+
+
+    </div>
+
+<div class="search-result">
+  {% for image in results %}
+  <img src="{{ image.image.url }}" alt=" not her" class="img">
+  
+  {% endfor %}
+</div>
+<!-- <div class="f-block" id="f-block">
+    <h2>هل تعلم؟</h2>
+    <ul dir="rtl" class="f-list">
+        <li><h3>هل تعلم أن نقص فيتامين د يمكن أن يؤثر سلبًا على صحة العظام؟</h3></li>
+        <li><p>فيتامين د يساعد في امتصاص الكالسيوم من الطعام، وبالتالي يلعب دورًا حيويًا في الحفاظ على صحة العظام والوقاية من الأمراض مثل هشاشة العظام</p></li>
+    </ul>
+
+
+    </div> -->
+   
+  </div>
+
+
+  
+  <div class="foot"></div>  
+
+  
+
+
+
+
+   
+</body>
+</html>
